@@ -15,7 +15,7 @@
 
 type Dao struct { ...... }
 
-const (
+var (
 	ErrRecordNotFound = errors.New("record not found")
 	......
 )
