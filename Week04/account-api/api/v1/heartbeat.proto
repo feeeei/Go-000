@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package account.v1;
+
+service Heartbeat {
+    rpc Heartbeat(Heart) returns (Heart) {};
+}
+
+enum HeartbeatType {
+    Ping = 0;
+    Pong = 1;
+}
+
+message Heart {
+    HeartbeatType type = 1;
+    int64 ts = 2;
+}
